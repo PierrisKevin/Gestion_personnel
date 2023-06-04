@@ -58,6 +58,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="food_link.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAZtJREFUSEvt
+        lU0rRGEYhs+S4mewZo+Fxcz4WCl7W2XpB6jZsjYlLGQpHymlEJup8Q9ISkaajVgYkY77fZ/7PcfpfD6d
+        5cxVd3nvDw9q4vXpLXzfH4eKMsaZBe8r6ILP3HcEBA2oKJucWej5fOa+A+ANQh82LYbpDnBe6nBNIhVV
+        zksd3pBIxTrnpQ7fSKTimvNSh18kUtHmPPjGYAKaki8tkTfrIfC+JFLR5dzs38TK5J31EJhdyVR8cm72
+        x2Jlcs56CMxHyVQ8cG72k9CvddOpsR4Cc18yFXucW/BeFTuROmtREFQkVzHNeQC8GejWpkITmmOcDApH
+        tlqMA85iIFuE3J99gXY6KA1DZ7aezSk0xFkMZCuQO7xMOx+Uq9AudG+W5A7agSqspYJOHXKH12jr4Dj+
+        wc8A9S3IHW7Q1sGx9vAJ5A4f0tbBsfZwC3KHm7R1cKw93JGV5ZV2PiiPQkvQtlkS87XxRlhLBZ0fMyDf
+        tLNB8f+HP40W64kgf5aa5Yl2Nijm/V82v80l64kgn4fakPkBZmn36Sk87w+v/H1wNVBlEgAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
   <data name="facture_link.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAMpJREFUSEvt
@@ -69,11 +82,11 @@
   </data>
   <data name="command_link.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACzSURBVEhL7dXbCsIwEIThvJhYb6xY3/9OkVKfI26yP0UZJdi1d/1gIWSWqQfQtPlJznmwudks
-        dbU5U6csHOtazJ06xUJLZ3Px46y884Mfc6ZOkbf0rL+x+5PH8Qd8LCCquFLkTazXfY7rPOAVUcWVIm9Z
-        /TvY2fR+nB1t9n78w0fUQp0iD6NOkYdRp8jDqFPkYdQp8jDqFHkYdcqyyVdCRuqUheVn91HXlikv8Psf
-        zkal9ATVY58aaY5z1AAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAALNJREFUSEvt
+        1dsKwjAQhOG8mFhvrFjf/06RUp8jbrI/RRkl2LV3/WAhZJapB9C0+UnOebC52Sx1tTlTpywc61rMnTrF
+        Qktnc/HjrLzzgx9zpk6Rt/Ssv7H7k8fxB3wsIKq4UuRNrNd9jus84BVRxZUib1n9O9jZ9H6cHW32fvzD
+        R9RCnSIPo06Rh1GnyMOoU+Rh1CnyMOoUeRh1yrLJV0JG6pSF5Wf3UdeWKS/w+x/ORqX0BNVjnxppjnPU
+        AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="room_link.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

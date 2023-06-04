@@ -18,3 +18,4 @@ D:\exo\C#\Gestion_chambre\Gestion_chambre\obj\Debug\net6.0-windows\ref\Gestion_c
 D:\exo\C#\Gestion_chambre\Gestion_chambre\obj\Debug\net6.0-windows\Gestion_chambre.Properties.Resources.resources
 D:\exo\C#\Gestion_chambre\Gestion_chambre\obj\Debug\net6.0-windows\Gestion_chambre.client_interface.resources
 D:\exo\C#\Gestion_chambre\Gestion_chambre\obj\Debug\net6.0-windows\Gestion_chambre.dashboard.resources
+D:\exo\C#\Gestion_chambre\Gestion_chambre\obj\Debug\net6.0-windows\Gestion_chambre.food.resources

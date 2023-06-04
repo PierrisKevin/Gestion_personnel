@@ -17,5 +17,15 @@ namespace Gestion_chambre
         {
             client_interface1.BringToFront();
         }
+
+        private void room_link_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void food_link_Click(object sender, EventArgs e)
+        {
+            food1.BringToFront();
+        }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_views));
             this.sieBars_contain = new System.Windows.Forms.Panel();
+            this.food_link = new System.Windows.Forms.Button();
             this.facture_link = new System.Windows.Forms.Button();
             this.command_link = new System.Windows.Forms.Button();
             this.room_link = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.exit_btn = new System.Windows.Forms.Button();
             this.dashboard1 = new Gestion_chambre.dashboard();
             this.client_interface1 = new Gestion_chambre.client_interface();
+            this.food1 = new Gestion_chambre.food();
             this.sieBars_contain.SuspendLayout();
             this.headear.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +48,7 @@
             // sieBars_contain
             // 
             this.sieBars_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.sieBars_contain.Controls.Add(this.food_link);
             this.sieBars_contain.Controls.Add(this.facture_link);
             this.sieBars_contain.Controls.Add(this.command_link);
             this.sieBars_contain.Controls.Add(this.room_link);
@@ -58,13 +61,29 @@
             this.sieBars_contain.Size = new System.Drawing.Size(213, 610);
             this.sieBars_contain.TabIndex = 0;
             // 
+            // food_link
+            // 
+            this.food_link.FlatAppearance.BorderSize = 0;
+            this.food_link.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.food_link.ForeColor = System.Drawing.Color.White;
+            this.food_link.Image = ((System.Drawing.Image)(resources.GetObject("food_link.Image")));
+            this.food_link.Location = new System.Drawing.Point(3, 199);
+            this.food_link.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.food_link.Name = "food_link";
+            this.food_link.Size = new System.Drawing.Size(189, 37);
+            this.food_link.TabIndex = 5;
+            this.food_link.Text = " produit";
+            this.food_link.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.food_link.UseVisualStyleBackColor = true;
+            this.food_link.Click += new System.EventHandler(this.food_link_Click);
+            // 
             // facture_link
             // 
             this.facture_link.FlatAppearance.BorderSize = 0;
             this.facture_link.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.facture_link.ForeColor = System.Drawing.Color.White;
             this.facture_link.Image = ((System.Drawing.Image)(resources.GetObject("facture_link.Image")));
-            this.facture_link.Location = new System.Drawing.Point(3, 241);
+            this.facture_link.Location = new System.Drawing.Point(12, 309);
             this.facture_link.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.facture_link.Name = "facture_link";
             this.facture_link.Size = new System.Drawing.Size(189, 37);
@@ -79,7 +98,7 @@
             this.command_link.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.command_link.ForeColor = System.Drawing.Color.White;
             this.command_link.Image = ((System.Drawing.Image)(resources.GetObject("command_link.Image")));
-            this.command_link.Location = new System.Drawing.Point(3, 200);
+            this.command_link.Location = new System.Drawing.Point(12, 268);
             this.command_link.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.command_link.Name = "command_link";
             this.command_link.Size = new System.Drawing.Size(189, 37);
@@ -102,6 +121,7 @@
             this.room_link.Text = " chambre";
             this.room_link.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.room_link.UseVisualStyleBackColor = true;
+            this.room_link.Click += new System.EventHandler(this.room_link_Click);
             // 
             // client_link
             // 
@@ -172,11 +192,19 @@
             this.client_interface1.Size = new System.Drawing.Size(981, 561);
             this.client_interface1.TabIndex = 3;
             // 
+            // food1
+            // 
+            this.food1.Location = new System.Drawing.Point(213, 38);
+            this.food1.Name = "food1";
+            this.food1.Size = new System.Drawing.Size(981, 572);
+            this.food1.TabIndex = 4;
+            // 
             // main_views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 610);
+            this.Controls.Add(this.food1);
             this.Controls.Add(this.client_interface1);
             this.Controls.Add(this.dashboard1);
             this.Controls.Add(this.headear);
@@ -204,5 +232,7 @@
         private Button exit_btn;
         private dashboard dashboard1;
         private client_interface client_interface1;
+        private Button food_link;
+        private food food1;
     }
 }

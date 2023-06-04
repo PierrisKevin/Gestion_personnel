@@ -97,6 +97,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.panel1.Controls.Add(this.del_btn);
             this.panel1.Controls.Add(this.edit_btn);
             this.panel1.Controls.Add(this.save_btn);
@@ -181,7 +182,7 @@
             // 
             // adresse_contain
             // 
-            this.adresse_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.adresse_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.adresse_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.adresse_contain.Location = new System.Drawing.Point(16, 212);
             this.adresse_contain.Multiline = true;
@@ -201,7 +202,7 @@
             // 
             // tel_contain
             // 
-            this.tel_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.tel_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.tel_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tel_contain.Location = new System.Drawing.Point(276, 125);
             this.tel_contain.Multiline = true;
@@ -221,7 +222,7 @@
             // 
             // cin_contain
             // 
-            this.cin_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.cin_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.cin_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cin_contain.Location = new System.Drawing.Point(13, 125);
             this.cin_contain.Multiline = true;
@@ -241,7 +242,7 @@
             // 
             // prename_contain
             // 
-            this.prename_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.prename_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.prename_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prename_contain.Location = new System.Drawing.Point(276, 46);
             this.prename_contain.Multiline = true;
@@ -261,7 +262,7 @@
             // 
             // name_contain
             // 
-            this.name_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.name_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.name_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.name_contain.Location = new System.Drawing.Point(13, 46);
             this.name_contain.Multiline = true;
