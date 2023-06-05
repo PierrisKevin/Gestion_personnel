@@ -41,6 +41,7 @@
             this.dashboard1 = new Gestion_chambre.dashboard();
             this.client_interface1 = new Gestion_chambre.client_interface();
             this.food1 = new Gestion_chambre.food();
+            this.chambre_forms1 = new Gestion_chambre.chambre_forms();
             this.sieBars_contain.SuspendLayout();
             this.headear.SuspendLayout();
             this.SuspendLayout();
@@ -200,11 +201,19 @@
             this.food1.Size = new System.Drawing.Size(981, 572);
             this.food1.TabIndex = 4;
             // 
+            // chambre_forms1
+            // 
+            this.chambre_forms1.Location = new System.Drawing.Point(213, 38);
+            this.chambre_forms1.Name = "chambre_forms1";
+            this.chambre_forms1.Size = new System.Drawing.Size(981, 572);
+            this.chambre_forms1.TabIndex = 5;
+            // 
             // main_views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 610);
+            this.Controls.Add(this.chambre_forms1);
             this.Controls.Add(this.food1);
             this.Controls.Add(this.client_interface1);
             this.Controls.Add(this.dashboard1);
@@ -235,5 +244,6 @@
         private client_interface client_interface1;
         private Button food_link;
         private food food1;
+        private chambre_forms chambre_forms1;
     }
 }

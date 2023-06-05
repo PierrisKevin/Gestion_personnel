@@ -20,7 +20,7 @@ namespace Gestion_chambre
 
         private void room_link_Click(object sender, EventArgs e)
         {
-
+            chambre_forms1.BringToFront();
         }
 
         private void food_link_Click(object sender, EventArgs e)
