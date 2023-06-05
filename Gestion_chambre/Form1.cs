@@ -27,5 +27,10 @@ namespace Gestion_chambre
         {
             food1.BringToFront();
         }
+
+        private void exit_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

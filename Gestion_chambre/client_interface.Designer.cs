@@ -31,9 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(client_interface));
             this.client_container = new System.Windows.Forms.Panel();
             this.search_btn = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.search_contain = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.list_container = new System.Windows.Forms.DataGridView();
+            this.identifiant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.id_contain = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.del_btn = new System.Windows.Forms.Button();
             this.edit_btn = new System.Windows.Forms.Button();
             this.save_btn = new System.Windows.Forms.Button();
@@ -49,6 +56,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.name_contain = new System.Windows.Forms.TextBox();
             this.client_container.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.list_container)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image_contain)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +66,7 @@
             // 
             this.client_container.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.client_container.Controls.Add(this.search_btn);
-            this.client_container.Controls.Add(this.textBox6);
+            this.client_container.Controls.Add(this.search_contain);
             this.client_container.Controls.Add(this.panel2);
             this.client_container.Controls.Add(this.panel1);
             this.client_container.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -77,27 +86,86 @@
             this.search_btn.Size = new System.Drawing.Size(32, 23);
             this.search_btn.TabIndex = 3;
             this.search_btn.UseVisualStyleBackColor = false;
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
-            // textBox6
+            // search_contain
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(15, 31);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(505, 37);
-            this.textBox6.TabIndex = 2;
+            this.search_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.search_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.search_contain.Location = new System.Drawing.Point(15, 31);
+            this.search_contain.Multiline = true;
+            this.search_contain.Name = "search_contain";
+            this.search_contain.Size = new System.Drawing.Size(505, 37);
+            this.search_contain.TabIndex = 2;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.list_container);
             this.panel2.Location = new System.Drawing.Point(538, 92);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(424, 462);
             this.panel2.TabIndex = 1;
             // 
+            // list_container
+            // 
+            this.list_container.AllowUserToAddRows = false;
+            this.list_container.AllowUserToDeleteRows = false;
+            this.list_container.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.list_container.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.list_container.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.identifiant,
+            this.nom,
+            this.prenom,
+            this.adresse});
+            this.list_container.EnableHeadersVisualStyles = false;
+            this.list_container.Location = new System.Drawing.Point(3, 2);
+            this.list_container.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.list_container.Name = "list_container";
+            this.list_container.ReadOnly = true;
+            this.list_container.RowHeadersVisible = false;
+            this.list_container.RowHeadersWidth = 51;
+            this.list_container.RowTemplate.Height = 29;
+            this.list_container.Size = new System.Drawing.Size(419, 458);
+            this.list_container.TabIndex = 0;
+            this.list_container.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.list_container_CellContentClick);
+            // 
+            // identifiant
+            // 
+            this.identifiant.HeaderText = "ID";
+            this.identifiant.MinimumWidth = 6;
+            this.identifiant.Name = "identifiant";
+            this.identifiant.ReadOnly = true;
+            this.identifiant.Width = 125;
+            // 
+            // nom
+            // 
+            this.nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nom.HeaderText = "Nom";
+            this.nom.MinimumWidth = 6;
+            this.nom.Name = "nom";
+            this.nom.ReadOnly = true;
+            // 
+            // prenom
+            // 
+            this.prenom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.prenom.HeaderText = "Prenom";
+            this.prenom.MinimumWidth = 6;
+            this.prenom.Name = "prenom";
+            this.prenom.ReadOnly = true;
+            // 
+            // adresse
+            // 
+            this.adresse.HeaderText = "Adresse";
+            this.adresse.MinimumWidth = 6;
+            this.adresse.Name = "adresse";
+            this.adresse.ReadOnly = true;
+            this.adresse.Width = 125;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.id_contain);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.del_btn);
             this.panel1.Controls.Add(this.edit_btn);
             this.panel1.Controls.Add(this.save_btn);
@@ -116,6 +184,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(505, 463);
             this.panel1.TabIndex = 0;
+            // 
+            // id_contain
+            // 
+            this.id_contain.Location = new System.Drawing.Point(306, 282);
+            this.id_contain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.id_contain.Name = "id_contain";
+            this.id_contain.Size = new System.Drawing.Size(110, 23);
+            this.id_contain.TabIndex = 15;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(205, 282);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 33);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "c";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // del_btn
             // 
@@ -146,6 +235,7 @@
             this.edit_btn.Text = "modifier";
             this.edit_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.edit_btn.UseVisualStyleBackColor = false;
+            this.edit_btn.Click += new System.EventHandler(this.edit_btn_Click);
             // 
             // save_btn
             // 
@@ -161,6 +251,7 @@
             this.save_btn.Text = "enregistrer";
             this.save_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.save_btn.UseVisualStyleBackColor = false;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
             // image_contain
             // 
@@ -184,6 +275,7 @@
             // 
             this.adresse_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.adresse_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adresse_contain.ForeColor = System.Drawing.Color.White;
             this.adresse_contain.Location = new System.Drawing.Point(16, 212);
             this.adresse_contain.Multiline = true;
             this.adresse_contain.Name = "adresse_contain";
@@ -204,6 +296,7 @@
             // 
             this.tel_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.tel_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tel_contain.ForeColor = System.Drawing.Color.White;
             this.tel_contain.Location = new System.Drawing.Point(276, 125);
             this.tel_contain.Multiline = true;
             this.tel_contain.Name = "tel_contain";
@@ -224,6 +317,7 @@
             // 
             this.cin_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.cin_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cin_contain.ForeColor = System.Drawing.Color.White;
             this.cin_contain.Location = new System.Drawing.Point(13, 125);
             this.cin_contain.Multiline = true;
             this.cin_contain.Name = "cin_contain";
@@ -244,6 +338,7 @@
             // 
             this.prename_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.prename_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.prename_contain.ForeColor = System.Drawing.Color.White;
             this.prename_contain.Location = new System.Drawing.Point(276, 46);
             this.prename_contain.Multiline = true;
             this.prename_contain.Name = "prename_contain";
@@ -264,6 +359,7 @@
             // 
             this.name_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.name_contain.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.name_contain.ForeColor = System.Drawing.Color.White;
             this.name_contain.Location = new System.Drawing.Point(13, 46);
             this.name_contain.Multiline = true;
             this.name_contain.Name = "name_contain";
@@ -279,6 +375,8 @@
             this.Size = new System.Drawing.Size(981, 572);
             this.client_container.ResumeLayout(false);
             this.client_container.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.list_container)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image_contain)).EndInit();
@@ -306,6 +404,13 @@
         private Button edit_btn;
         private Button save_btn;
         private Button search_btn;
-        private TextBox textBox6;
+        private TextBox search_contain;
+        private Button button1;
+        private DataGridView list_container;
+        private DataGridViewTextBoxColumn identifiant;
+        private DataGridViewTextBoxColumn nom;
+        private DataGridViewTextBoxColumn prenom;
+        private DataGridViewTextBoxColumn adresse;
+        private TextBox id_contain;
     }
 }

@@ -1,4 +1,10 @@
-﻿namespace Gestion_chambre
+﻿using Google.Protobuf.WellKnownTypes;
+using LiveCharts;
+using LiveCharts.Wpf;
+
+using MySql.Data.MySqlClient;
+
+namespace Gestion_chambre
 {
     partial class dashboard
     {
@@ -29,7 +35,7 @@
         private void InitializeComponent()
         {
             this.dash_container = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.chart_contain = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.price_value = new System.Windows.Forms.Label();
@@ -38,10 +44,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dispo_nbt = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.nbReservation = new System.Windows.Forms.Label();
             this.label_nombre = new System.Windows.Forms.Label();
             this.dash_container.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -53,7 +59,7 @@
             // dash_container
             // 
             this.dash_container.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dash_container.Controls.Add(this.panel4);
+            this.dash_container.Controls.Add(this.chart_contain);
             this.dash_container.Controls.Add(this.panel3);
             this.dash_container.Controls.Add(this.panel1);
             this.dash_container.Controls.Add(this.panel2);
@@ -63,13 +69,13 @@
             this.dash_container.Size = new System.Drawing.Size(981, 572);
             this.dash_container.TabIndex = 0;
             // 
-            // panel4
+            // chart_contain
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.panel4.Location = new System.Drawing.Point(22, 174);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(555, 384);
-            this.panel4.TabIndex = 4;
+            this.chart_contain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.chart_contain.Location = new System.Drawing.Point(22, 174);
+            this.chart_contain.Name = "chart_contain";
+            this.chart_contain.Size = new System.Drawing.Size(555, 384);
+            this.chart_contain.TabIndex = 4;
             // 
             // panel3
             // 
@@ -147,23 +153,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.dispo_nbt);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(312, 21);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 131);
             this.panel1.TabIndex = 2;
             // 
-            // label2
+            // dispo_nbt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 65);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "00";
+            this.dispo_nbt.AutoSize = true;
+            this.dispo_nbt.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dispo_nbt.ForeColor = System.Drawing.Color.White;
+            this.dispo_nbt.Location = new System.Drawing.Point(13, 52);
+            this.dispo_nbt.Name = "dispo_nbt";
+            this.dispo_nbt.Size = new System.Drawing.Size(82, 65);
+            this.dispo_nbt.TabIndex = 1;
+            this.dispo_nbt.Text = "00";
             // 
             // label3
             // 
@@ -178,7 +184,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.nbReservation);
             this.panel2.Controls.Add(this.label_nombre);
             this.panel2.Location = new System.Drawing.Point(16, 19);
             this.panel2.Name = "panel2";
@@ -186,16 +192,16 @@
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label1
+            // nbReservation
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 65);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "00";
+            this.nbReservation.AutoSize = true;
+            this.nbReservation.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.nbReservation.ForeColor = System.Drawing.Color.White;
+            this.nbReservation.Location = new System.Drawing.Point(13, 52);
+            this.nbReservation.Name = "nbReservation";
+            this.nbReservation.Size = new System.Drawing.Size(82, 65);
+            this.nbReservation.TabIndex = 1;
+            this.nbReservation.Text = "00";
             // 
             // label_nombre
             // 
@@ -228,15 +234,33 @@
 
         #endregion
 
+        /*
+        public void addChart()
+        {
+            LiveCharts.WinForms.CartesianChart cartesianChart = new LiveCharts.WinForms.CartesianChart();
+            cartesianChart.Series = new SeriesCollection
+            {
+                new LineSeries{
+                    Title = "Series";
+                    Values = new ChartValues<double> { 1, 4, 2, 5 };
+                }
+            };
+        }
+        */
+        public void setValeur()
+        {
+
+        }
+
         private Panel dash_container;
         private Panel panel2;
-        private Label label1;
+        private Label nbReservation;
         private Label label_nombre;
         private Panel panel3;
         private Panel panel1;
-        private Label label2;
+        private Label dispo_nbt;
         private Label label3;
-        private Panel panel4;
+        private Panel chart_contain;
         private Label label4;
         private Label label5;
         private Label price_label;
